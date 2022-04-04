@@ -1,0 +1,1076 @@
+[
+    {
+        "id": "ceb50f5a34036b26",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "43ada9bf7fa2f180",
+        "type": "pubnub in",
+        "z": "ceb50f5a34036b26",
+        "keys": "3ee7fe7002386f28",
+        "channel": "karan1199",
+        "auth_token": "",
+        "cipher_key": "",
+        "ssl": true,
+        "verbose_logging": false,
+        "x": 200,
+        "y": 260,
+        "wires": [
+            [
+                "fdd15446e2496abc",
+                "eb62f815fec7a15f",
+                "198b0ce585113b23",
+                "157ee7b2ebafeedb",
+                "a8dcf51d786c7b38",
+                "9766b6fcfe25579a",
+                "5de8a5380e3a285d",
+                "48fb5f359dbe7490",
+                "9992625f469e9392",
+                "e365232555f26167",
+                "febc2c152fe53fb1",
+                "f36d89c2b0546ae8",
+                "0f8e5d9d24683c31",
+                "5c705e385a7cce54",
+                "5c3971181b1fb83d"
+            ]
+        ]
+    },
+    {
+        "id": "fdd15446e2496abc",
+        "type": "ui_text",
+        "z": "ceb50f5a34036b26",
+        "group": "5fd0edd228007b9a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status : ",
+        "format": "{{msg.payload[0][\"Robot1Status\"]}}",
+        "layout": "row-left",
+        "x": 520,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "eb62f815fec7a15f",
+        "type": "ui_gauge",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "group": "5fd0edd228007b9a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Voltage",
+        "label": "units",
+        "format": "{{msg.payload[0][\"Robot1Voltage\"]}}",
+        "min": 0,
+        "max": "12",
+        "colors": [
+            "#b62f2f",
+            "#e6e600",
+            "#0cbb46"
+        ],
+        "seg1": "4",
+        "seg2": "8",
+        "x": 520,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "198b0ce585113b23",
+        "type": "ui_text",
+        "z": "ceb50f5a34036b26",
+        "group": "5fd0edd228007b9a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Operation : ",
+        "format": "{{msg.payload[0][\"Robot1Operation\"]}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 530,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "157ee7b2ebafeedb",
+        "type": "ui_text",
+        "z": "ceb50f5a34036b26",
+        "group": "ea7735ce07759534",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status : ",
+        "format": "{{msg.payload[0][\"Robot2Status\"]}}",
+        "layout": "row-left",
+        "x": 520,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a8dcf51d786c7b38",
+        "type": "ui_gauge",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "group": "ea7735ce07759534",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Voltage",
+        "label": "units",
+        "format": "{{msg.payload[0][\"Robot2Voltage\"]}}",
+        "min": 0,
+        "max": "12",
+        "colors": [
+            "#b62f2f",
+            "#e6e600",
+            "#0cbb46"
+        ],
+        "seg1": "4",
+        "seg2": "8",
+        "x": 520,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "9766b6fcfe25579a",
+        "type": "ui_text",
+        "z": "ceb50f5a34036b26",
+        "group": "ea7735ce07759534",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Operation : ",
+        "format": "{{msg.payload[0][\"Robot2Operation\"]}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 530,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "5ce3bb09b0c7f60c",
+        "type": "comment",
+        "z": "ceb50f5a34036b26",
+        "name": "Robot 1",
+        "info": "",
+        "x": 650,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "5d1f2deec8d9de4d",
+        "type": "comment",
+        "z": "ceb50f5a34036b26",
+        "name": "Robot 2",
+        "info": "",
+        "x": 650,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "e3d0125d5b718eb6",
+        "type": "ui_text",
+        "z": "ceb50f5a34036b26",
+        "group": "bf7c89ce059fcc74",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperature : ",
+        "format": "{{msg.payload[\"tempc\"]}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 540,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "fd06af24dba6a253",
+        "type": "ui_chart",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "group": "bf7c89ce059fcc74",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature (°C)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "20",
+        "removeOlder": "15",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 550,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c7caaaa5471cf42",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "func": "var data = {topic:\"temperature\", payload:msg.payload[\"tempc\"]}\nreturn data;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 400,
+        "wires": [
+            [
+                "fd06af24dba6a253"
+            ]
+        ]
+    },
+    {
+        "id": "3e836fb96971db1a",
+        "type": "ui_text",
+        "z": "ceb50f5a34036b26",
+        "group": "8bd1248176248470",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Humidity : ",
+        "format": "{{msg.payload[\"humidity\"]}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 520,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d8f25e9bb03a7de9",
+        "type": "ui_chart",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "group": "8bd1248176248470",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity (%)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "20",
+        "ymax": "80",
+        "removeOlder": "15",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 530,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "016ffd7343a4948d",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "func": "var data = {topic:\"temperature\", payload:msg.payload[\"humidity\"]}\nreturn data;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 520,
+        "wires": [
+            [
+                "d8f25e9bb03a7de9"
+            ]
+        ]
+    },
+    {
+        "id": "6e4add55aacd92e4",
+        "type": "comment",
+        "z": "ceb50f5a34036b26",
+        "name": "Temp",
+        "info": "",
+        "x": 710,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "2871c795f65c778b",
+        "type": "comment",
+        "z": "ceb50f5a34036b26",
+        "name": "Humidity",
+        "info": "",
+        "x": 680,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "1da96ed52f56c8ea",
+        "type": "pubnub out",
+        "z": "ceb50f5a34036b26",
+        "keys": "3ee7fe7002386f28",
+        "channel": "karan1199",
+        "auth_token": "",
+        "cipher_key": "",
+        "ssl": true,
+        "verbose_logging": false,
+        "x": 990,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "20571d1926c2db7d",
+        "type": "ui_button",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "group": "2c6d53361d636aa1",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "START",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 180,
+        "y": 880,
+        "wires": [
+            [
+                "466109bd882a8bdf"
+            ]
+        ]
+    },
+    {
+        "id": "b5b33ee6cc7c464f",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "func": "var m  = [\n{\n\t\"Robot1Status\":\"Connected\",\n\t\"Robot1Voltage\":5.3,\n\t\"Robot2Status\":\"Connected\",\n\t\"Robot2Voltage\":6.2,\n\t\"env_temp\":global.get(\"temp\"),\n\t\"env_humidity\": global.get(\"humidity\"),\n\t\"No_of_robot1_trips\" : 5,\n\t\"No_of_robot2_trips\" : 5,\n\t\"Lights_on_off\": 1,\n\t\"Robot1Operation\":global.get(\"robot1operation\"),\t\n\t\"Robot2Operation\":global.get(\"robot2operation\"),\n\t\"lots_robot1\" : global.get(\"lot1\"),\n\t\"light_robot1\" : global.get(\"light1\"),\n\t\"lots_robot2\" : global.get(\"lot2\"),\n\t\"light_robot2\" : global.get(\"light2\"),\n\t\"Emergency_stop\":global.get(\"eme\")\n}\n]\nmsg.payload = m\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 880,
+        "wires": [
+            [
+                "1da96ed52f56c8ea",
+                "4b4e7bf22f2331ae",
+                "c6d9954bdcd037ad"
+            ]
+        ]
+    },
+    {
+        "id": "262ed7a8a3c8f098",
+        "type": "ui_text_input",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "label": "No of Lots : ",
+        "tooltip": "",
+        "group": "2c6d53361d636aa1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 190,
+        "y": 620,
+        "wires": [
+            [
+                "8dae6886e17c093d"
+            ]
+        ]
+    },
+    {
+        "id": "8dae6886e17c093d",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "lot1",
+        "func": "global.set(\"lot1\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5de8a5380e3a285d",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "robot1status",
+        "func": "global.set(\"robot1status\",msg.payload[0][\"Robot1Status\"]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48fb5f359dbe7490",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "robot1voltage",
+        "func": "global.set(\"robot1voltage\",msg.payload[0][\"Robot1Voltage\"]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9992625f469e9392",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "robot1operation",
+        "func": "global.set(\"robot1operation\",msg.payload[0][\"Robot1Operation\"]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e365232555f26167",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "robot2status",
+        "func": "global.set(\"robot2status\",msg.payload[0][\"Robot2Status\"]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "febc2c152fe53fb1",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "robot2voltage",
+        "func": "global.set(\"robot2voltage\",msg.payload[0][\"Robot2Voltage\"]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f36d89c2b0546ae8",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "robot2operation",
+        "func": "global.set(\"robot2operation\",msg.payload[0][\"Robot2Operation\"]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0f8e5d9d24683c31",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "temp",
+        "func": "global.set(\"temp\",msg.payload[0][\"env_temp\"]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c705e385a7cce54",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "humidity",
+        "func": "global.set(\"humidity\",msg.payload[0][\"env_humidity\"]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ead58e4719715af",
+        "type": "ui_text_input",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "label": "No of Lots : ",
+        "tooltip": "",
+        "group": "a2ab499cce438ee7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 190,
+        "y": 660,
+        "wires": [
+            [
+                "ae2974f0ea3e6802"
+            ]
+        ]
+    },
+    {
+        "id": "ae2974f0ea3e6802",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "lot2",
+        "func": "global.set(\"lot2\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b2eabc5c7bbfb59a",
+        "type": "ui_button",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "group": "a2ab499cce438ee7",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "START",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 180,
+        "y": 920,
+        "wires": [
+            [
+                "edcfcc2b508ecbfd"
+            ]
+        ]
+    },
+    {
+        "id": "10f7b4762fef4d93",
+        "type": "ui_switch",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "label": "Lights : ",
+        "tooltip": "",
+        "group": "2c6d53361d636aa1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 200,
+        "y": 720,
+        "wires": [
+            [
+                "2238a2e712f31ee8"
+            ]
+        ]
+    },
+    {
+        "id": "2238a2e712f31ee8",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "light1",
+        "func": "global.set(\"light1\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 720,
+        "wires": [
+            [
+                "b5b33ee6cc7c464f"
+            ]
+        ]
+    },
+    {
+        "id": "a0f772c36c898b32",
+        "type": "ui_switch",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "label": "Lights : ",
+        "tooltip": "",
+        "group": "a2ab499cce438ee7",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 200,
+        "y": 780,
+        "wires": [
+            [
+                "02b01525350fc9da"
+            ]
+        ]
+    },
+    {
+        "id": "02b01525350fc9da",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "light2",
+        "func": "global.set(\"light2\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 780,
+        "wires": [
+            [
+                "b5b33ee6cc7c464f"
+            ]
+        ]
+    },
+    {
+        "id": "fe389e685e62bd17",
+        "type": "ui_switch",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "label": "Emergency Stop : ",
+        "tooltip": "",
+        "group": "1816f3f3ba28219d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 210,
+        "y": 980,
+        "wires": [
+            [
+                "7932f3b82df46b17",
+                "b9f4f5c6fd574488"
+            ]
+        ]
+    },
+    {
+        "id": "7932f3b82df46b17",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "eme6",
+        "func": "global.set(\"eme\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 980,
+        "wires": [
+            [
+                "b5b33ee6cc7c464f"
+            ]
+        ]
+    },
+    {
+        "id": "b9f4f5c6fd574488",
+        "type": "ui_text",
+        "z": "ceb50f5a34036b26",
+        "group": "1816f3f3ba28219d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status : ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 520,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "5c3971181b1fb83d",
+        "type": "openweathermap",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "wtype": "current",
+        "lon": "-79.843826",
+        "lat": "43.255203",
+        "city": "",
+        "country": "",
+        "language": "en",
+        "x": 150,
+        "y": 440,
+        "wires": [
+            [
+                "016ffd7343a4948d",
+                "7c7caaaa5471cf42",
+                "e3d0125d5b718eb6",
+                "3e836fb96971db1a"
+            ]
+        ]
+    },
+    {
+        "id": "466109bd882a8bdf",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "func": "global.set(\"robot1operation\",1);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 880,
+        "wires": [
+            [
+                "b5b33ee6cc7c464f"
+            ]
+        ]
+    },
+    {
+        "id": "edcfcc2b508ecbfd",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "func": "global.set(\"robot2operation\",1);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 920,
+        "wires": [
+            [
+                "b5b33ee6cc7c464f"
+            ]
+        ]
+    },
+    {
+        "id": "4b4e7bf22f2331ae",
+        "type": "delay",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 960,
+        "y": 820,
+        "wires": [
+            [
+                "7962fbabb2926f07"
+            ]
+        ]
+    },
+    {
+        "id": "7962fbabb2926f07",
+        "type": "function",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "func": "global.set(\"robot1operation\",0);\nglobal.set(\"robot2operation\",0);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6d9954bdcd037ad",
+        "type": "debug",
+        "z": "ceb50f5a34036b26",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "faa78b7a276d1820",
+        "type": "ui_spacer",
+        "z": "ceb50f5a34036b26",
+        "name": "spacer",
+        "group": "bf7c89ce059fcc74",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0642c0e3c51cb8b4",
+        "type": "ui_spacer",
+        "z": "ceb50f5a34036b26",
+        "name": "spacer",
+        "group": "8bd1248176248470",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "cd4108f23efc4088",
+        "type": "ui_spacer",
+        "z": "ceb50f5a34036b26",
+        "name": "spacer",
+        "group": "1816f3f3ba28219d",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "3ee7fe7002386f28",
+        "type": "pubnub-keys",
+        "pub_key": "pub-c-3dd4d929-0243-4c13-a11f-d8076bbcfc0c",
+        "sub_key": "sub-c-278756ba-8923-11ec-9f2b-a2cedba671e8"
+    },
+    {
+        "id": "5fd0edd228007b9a",
+        "type": "ui_group",
+        "name": "Robot 1",
+        "tab": "bee982fc31a03168",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false
+    },
+    {
+        "id": "ea7735ce07759534",
+        "type": "ui_group",
+        "name": "Robot 2",
+        "tab": "bee982fc31a03168",
+        "order": 2,
+        "disp": true,
+        "width": "7",
+        "collapse": false
+    },
+    {
+        "id": "bf7c89ce059fcc74",
+        "type": "ui_group",
+        "name": "Live Temperature",
+        "tab": "bee982fc31a03168",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "8bd1248176248470",
+        "type": "ui_group",
+        "name": "Live Humidity",
+        "tab": "bee982fc31a03168",
+        "order": 4,
+        "disp": true,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "2c6d53361d636aa1",
+        "type": "ui_group",
+        "name": "Robot 1 Trip",
+        "tab": "bee982fc31a03168",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a2ab499cce438ee7",
+        "type": "ui_group",
+        "name": "Robot 2 Trip",
+        "tab": "bee982fc31a03168",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "1816f3f3ba28219d",
+        "type": "ui_group",
+        "name": "Emergency Stop",
+        "tab": "bee982fc31a03168",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "bee982fc31a03168",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
